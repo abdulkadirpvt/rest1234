@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("employee")
 public class EmployeeController {
 
     @Autowired
     private EmployeeServiceImp service;
 
-    @RequestMapping("home")
+    @GetMapping
     public String getLogin(){
         return "Hello World";
     }
